@@ -18,7 +18,7 @@
                         <td>{{$post->title}}</td>
                         <td>{{$post->slug}}</td>
                         <td>
-                            <a class="btn btn-primary" href="#">Dettagli</a>
+                            <a class="btn btn-primary" href="{{route('admin.posts.show', ['post' => $post])}}">Dettagli</a>
                         </td>
                     </tr>
                 @empty
