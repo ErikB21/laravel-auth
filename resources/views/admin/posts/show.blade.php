@@ -9,7 +9,7 @@
             <li>{{$post->slug}}</li>
             <li>{{$post->description}}</li>
             <li>
-                <a class="btn btn-warning" href="#">Modifica</a>
+                <a class="btn btn-warning" href="{{route('admin.posts.edit', ['post' => $post])}}">Modifica</a>
             </li>
         </ul>
     </div>
