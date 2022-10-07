@@ -37,11 +37,20 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'title' => 'required|min:4|max:255',
+            'slug' => 'required|min:4|max:7!unique',
+            'description' => 'required|max:65535'
+        ],
+        [
+            'slug.required' => 'Il campo slug non è stato compilato a dovere.'
+        ]
+    );
         $data = $request->all();
         $newPost = new Post();
         $newPost->fill($data);
         $newPost->save();
-        return redirect()->route('admin.posts.index');
+        return redirect()->route('admin.posts.index')->with('success', 'Hai creato un post correttamente');
     }
 
     /**
@@ -75,10 +84,19 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
+        $request->validate([
+            'title' => 'required|min:4|max:255',
+            'slug' => 'required|min:4|max:7!unique',
+            'description' => 'required|max:65535'
+        ],
+        [
+            'slug.required' => 'Il campo slug non è stato compilato a dovere.'
+        ]
+    );
         $data = $request->all();
         $post->update($data);
         $post->save();
-        return redirect()->route('admin.posts.show', compact('post'));
+        return redirect()->route('admin.posts.show', compact('post'))->with('warning', 'Hai modificato il post correttamente');
     }
 
     /**
@@ -90,6 +108,6 @@ class PostController extends Controller
     public function destroy(Post $post)
     {
         $post->delete();
-        return redirect()->route('admin.posts.index');
+        return redirect()->route('admin.posts.index')->with('danger', 'Hai eliminato il post correttamente');
     }
 }

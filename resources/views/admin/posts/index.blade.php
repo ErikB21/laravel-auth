@@ -2,6 +2,21 @@
 
 @section('content')
     <div class="container">
+        
+        @if (session('success'))
+            <div class="container">
+                <div class="alert alert-success">
+                    {{ session('success') }}
+                </div>
+            </div>
+        @elseif (session('danger'))
+            <div class="container">
+                <div class="alert alert-danger">
+                    {{ session('danger') }}
+                </div>
+            </div>
+        @endif
+
         <h1>Post</h1>
         <a class="btn btn-primary" href="{{route('admin.posts.create')}}">Crea un post</a>
         <table class="table">
