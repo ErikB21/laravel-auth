@@ -49674,15 +49674,75 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/sass/create.scss":
+/*!************************************!*\
+  !*** ./resources/sass/create.scss ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/edit.scss":
+/*!**********************************!*\
+  !*** ./resources/sass/edit.scss ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/home.scss":
+/*!**********************************!*\
+  !*** ./resources/sass/home.scss ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/index.scss":
+/*!***********************************!*\
+  !*** ./resources/sass/index.scss ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/show.scss":
+/*!**********************************!*\
+  !*** ./resources/sass/show.scss ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ 0:
-/*!*************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ***!
-  \*************************************************************/
+/*!*******************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/index.scss ./resources/sass/edit.scss ./resources/sass/show.scss ./resources/sass/home.scss ./resources/sass/create.scss ***!
+  \*******************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! C:\Users\erikb\Desktop\Boolean_Erik\VISUALCODE_LARAVEL\laravel-auth\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\erikb\Desktop\Boolean_Erik\VISUALCODE_LARAVEL\laravel-auth\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\erikb\Desktop\Boolean_Erik\VISUALCODE_LARAVEL\laravel-auth\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\erikb\Desktop\Boolean_Erik\VISUALCODE_LARAVEL\laravel-auth\resources\sass\index.scss */"./resources/sass/index.scss");
+__webpack_require__(/*! C:\Users\erikb\Desktop\Boolean_Erik\VISUALCODE_LARAVEL\laravel-auth\resources\sass\edit.scss */"./resources/sass/edit.scss");
+__webpack_require__(/*! C:\Users\erikb\Desktop\Boolean_Erik\VISUALCODE_LARAVEL\laravel-auth\resources\sass\show.scss */"./resources/sass/show.scss");
+__webpack_require__(/*! C:\Users\erikb\Desktop\Boolean_Erik\VISUALCODE_LARAVEL\laravel-auth\resources\sass\home.scss */"./resources/sass/home.scss");
+module.exports = __webpack_require__(/*! C:\Users\erikb\Desktop\Boolean_Erik\VISUALCODE_LARAVEL\laravel-auth\resources\sass\create.scss */"./resources/sass/create.scss");
 
 
 /***/ })

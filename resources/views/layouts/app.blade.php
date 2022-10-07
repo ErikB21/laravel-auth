@@ -21,10 +21,11 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @yield('css')
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     Boolpress
@@ -37,11 +38,15 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
+                            <a href="{{route('admin.home')}}" class="nav-link"><i class="fa-solid fa-house"></i> Home</a>
+                        </li>
+                        <li class="nav-item">
                             <a href="{{route('admin.posts.index')}}" class="nav-link"><i class="fa-solid fa-signs-post"></i> Gestione Post</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{route('admin.home')}}" class="nav-link"><i class="fa-solid fa-house"></i> Home</a>
+                            <a class="nav-link" href="{{route('admin.posts.create')}}"><i class="fa-solid fa-circle-plus"></i> Nuovo Post</a>
                         </li>
+                        
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -80,9 +85,10 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main>
             @yield('content')
         </main>
+        <footer class="container-flui px-0 bg-dark"></footer>
     </div>
 </body>
 </html>

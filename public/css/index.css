@@ -1,0 +1,14 @@
+.my_bg {
+  background-image: url("https://img.freepik.com/free-vector/low-poly-white-background-design_1017-33204.jpg?w=2000");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.my_bg h1 {
+  font-size: 5.5rem;
+}
+
+.my_bg .table {
+  width: 60%;
+}
+

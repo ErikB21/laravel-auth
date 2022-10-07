@@ -86,7 +86,7 @@ class PostController extends Controller
     {
         $request->validate([
             'title' => 'required|min:4|max:255',
-            'slug' => 'required|min:4|max:7!unique',
+            'slug' => 'required|min:4|max:7',
             'description' => 'required|max:65535'
         ],
         [

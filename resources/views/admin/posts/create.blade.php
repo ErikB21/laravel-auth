@@ -2,6 +2,10 @@
 
 @section('title', 'Crea un post')
 
+@section('css')
+    <link rel="stylesheet" href="{{ asset('css/create.css')}}">
+@endsection
+
 @section('content')
 
     <div class="container">

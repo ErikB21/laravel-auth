@@ -2,28 +2,31 @@
 
 @section('title', 'Post')
 
+@section('css')
+    <link rel="stylesheet" href="{{ asset('css/index.css')}}">
+@endsection
+
 @section('content')
-    <div class="container">
+    <div class="container-fluid pt-4 px-0 my_bg">
         
         @if (session('success'))
             <div class="container">
                 <div class="alert alert-success">
-                    {{ session('success') }}
+                    <i class="fa-solid  fa-circle-check"></i> {{ session('success') }} 
                 </div>
             </div>
         @elseif (session('danger'))
             <div class="container">
                 <div class="alert alert-danger">
-                    {{ session('danger') }}
+                    <i class="fa-regular fa-trash-can"></i> {{ session('danger') }} 
                 </div>
             </div>
         @endif
 
-        <h1>Post</h1>
-        <a class="btn btn-primary" href="{{route('admin.posts.create')}}">Crea un post</a>
-        <table class="table">
-            <thead>
-                <tr>
+        <h1 class="text-center py-3">Post</h1>
+        <table class="table m-auto table-dark pb-5">
+            <thead class="">
+                <tr class="text-primary">
                     <th scope="col">#</th>
                     <th scope="col">Title</th>
                     <th scope="col">Slug</th>
