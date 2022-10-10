@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class PostController extends Controller
 {
@@ -39,16 +40,18 @@ class PostController extends Controller
     {
         $request->validate([
             'title' => 'required|min:4|max:255',
-            'slug' => 'required|min:4|max:7!unique',
             'description' => 'required|max:65535'
-        ],
-        [
-            'slug.required' => 'Il campo slug non è stato compilato a dovere.'
         ]
     );
+
         $data = $request->all();
         $newPost = new Post();
         $newPost->fill($data);
+
+        $slug = $this->calcSlug($newPost->title);
+
+        $newPost->slug = $slug;
+
         $newPost->save();
         return redirect()->route('admin.posts.index')->with('success', 'Hai creato un post correttamente');
     }
@@ -84,19 +87,35 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        $request->validate([
-            'title' => 'required|min:4|max:255',
-            'slug' => 'required|min:4|max:7',
-            'description' => 'required|max:65535'
-        ],
-        [
-            'slug.required' => 'Il campo slug non è stato compilato a dovere.'
-        ]
-    );
+            $request->validate([
+                'title' => 'required|min:4|max:255',
+                'description' => 'required|max:65535'
+            ]
+        );
         $data = $request->all();
+
+        if($post->title !== $data['title']){
+            $data['slug'] = $this->calcSlug($data['title']);
+        }
+
         $post->update($data);
-        $post->save();
         return redirect()->route('admin.posts.show', compact('post'))->with('warning', 'Hai modificato il post correttamente');
+    }
+
+
+    protected function calcSlug($title){
+        $slug = Str::slug($title, '-');//metodo che converto in una stringa
+
+        $checkPost = Post::where('slug', $slug)->first();//guarda se quel slug è gia presente
+
+        $counter = 1;
+
+        while($checkPost){
+            $slug = Str::slug($title, '-' . $counter . '-');
+            $counter++;
+            $checkPost = Post::where('slug', $slug)->first();
+        }
+        return $slug;
     }
 
     /**
