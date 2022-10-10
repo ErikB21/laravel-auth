@@ -43,9 +43,6 @@
                         <li class="nav-item">
                             <a href="{{route('admin.posts.index')}}" class="nav-link"><i class="fa-solid fa-signs-post"></i> Gestione Post</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('admin.posts.create')}}"><i class="fa-solid fa-circle-plus"></i> Nuovo Post</a>
-                        </li>
                         
                     </ul>
 

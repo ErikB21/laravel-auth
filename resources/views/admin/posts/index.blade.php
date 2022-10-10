@@ -23,7 +23,10 @@
             </div>
         @endif
 
-        <h1 class="text-center py-3">Post</h1>
+        <div class="d-flex justify-content-between align-items-center px-2 my_title">
+            <h1 class="text-center py-3">Post</h1>
+            <a class="btn btn-dark" href="{{route('admin.posts.create')}}"><i class="fa-solid fa-circle-plus pr-2 text-primary"></i>Nuovo Post</a>
+        </div>
         <table class="table m-auto table-dark pb-5">
             <thead class="">
                 <tr class="text-primary">

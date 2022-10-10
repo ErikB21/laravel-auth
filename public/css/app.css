@@ -4,14 +4,35 @@
   background-image: url("https://img.freepik.com/free-vector/low-poly-white-background-design_1017-33204.jpg?w=2000");
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 30px 0;
 }
 
-.my_bg h1 {
+.my_bg .my_title {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.my_bg .my_title h1 {
   font-size: 5.5rem;
 }
 
 .my_bg .table {
   width: 60%;
+}
+
+.my_width_form {
+  width: 100vw;
+  background-image: url("https://img.freepik.com/free-vector/paper-style-white-monochrome-background_23-2149001605.jpg?w=2000");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 20px;
+  height: 80vh;
+}
+
+.my_width_form .sec_bg {
+  width: 60%;
+  margin: 0 auto;
+  height: 100%;
 }
 
 .my_bg_2 {
@@ -22,13 +43,28 @@
 }
 
 .my_bg_2 .square {
-  height: 250px;
-  width: 300px;
+  height: 270px;
+  width: 320px;
+}
+
+.my_width_form {
+  width: 100vw;
+  background-image: url("https://img.freepik.com/free-vector/paper-style-white-monochrome-background_23-2149001605.jpg?w=2000");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 20px;
+  height: 80vh;
+}
+
+.my_width_form .sec_bg {
+  width: 60%;
+  margin: 0 auto;
+  height: 100%;
 }
 
 .my_height {
   height: 100vh;
-  background-image: url("https://img.freepik.com/free-vector/abstract-blue-geometric-shapes-background_1035-17545.jpg?w=2000");
+  background-image: url("https://img.freepik.com/free-vector/hand-painted-watercolor-abstract-watercolor-background_23-2149005675.jpg?w=2000");
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 20px;
